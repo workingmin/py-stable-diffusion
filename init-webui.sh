@@ -41,3 +41,6 @@ if [ ! -d "$workdir/stable-diffusion-webui/repositories/BLIP" ]; then
     cd BLIP
     git checkout '48211a1594f1321b00f14c9f7a5b4813144b2fb9'
 fi
+
+pip install basicsr --use-pep517 --verbose
+pip install -r requirements.txt --verbose
