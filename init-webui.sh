@@ -42,5 +42,9 @@ if [ ! -d "$workdir/stable-diffusion-webui/repositories/BLIP" ]; then
     git checkout '48211a1594f1321b00f14c9f7a5b4813144b2fb9'
 fi
 
+py3o10=`which python3.10`
+virtualenv --python=$py3o10 $workdir/stable-diffusion-webui/venv
+source $workdir/stable-diffusion-webui/venv/bin/activate
+
 pip install basicsr --use-pep517 --verbose
-pip install -r requirements.txt --verbose
+pip install -r $workdir/stable-diffusion-webui/requirements.txt --verbose
