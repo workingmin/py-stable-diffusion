@@ -47,4 +47,4 @@ virtualenv --python=$py3o10 $workdir/stable-diffusion-webui/venv
 source $workdir/stable-diffusion-webui/venv/bin/activate
 
 pip install basicsr --use-pep517 --verbose
-pip install -r $workdir/stable-diffusion-webui/requirements.txt --verbose
+pip install -r $workdir/requirements.txt --verbose
